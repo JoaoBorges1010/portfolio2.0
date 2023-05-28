@@ -37,7 +37,7 @@ const Hero = () => {
         <h2 className="text-sm text-gray-500 pb-2 tracking-[15px]">
           FullStack developer
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className=" text-light text-5xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#B70404" />
         </h1>

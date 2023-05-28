@@ -12,6 +12,9 @@ module.exports = {
         light: "#f5f5f5",
         primary: "#B70404",
       },
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
     },
   },
   plugins: [],

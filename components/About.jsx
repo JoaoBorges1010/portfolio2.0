@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { FiDownload } from "react-icons/fi";
 
 const About = () => {
   return (
@@ -18,8 +20,8 @@ const About = () => {
         About
       </h3>
       <motion.img
-        initial={{ x: -200, opacity: 0 }}
-        transition={{ duration: 1.2 }}
+        initial={{ x: -500, opacity: 0 }}
+        transition={{ duration: 1.5 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         src="/assets/joaoBorges2.jpg"
@@ -27,7 +29,10 @@ const About = () => {
       />
       <div className=" px-10 mt-24 space-y-3">
         <h3 className="text-4xl font-semibold">
-          Heres a <span className="underline decoration-primary">little</span>{" "}
+          Heres a{" "}
+          <span className="underline decoration-primary underline-offset-2">
+            little
+          </span>{" "}
           background
         </h3>
         <p className="text-base mt-4 text-gray-500">
@@ -38,9 +43,16 @@ const About = () => {
           euismod a quis mauris.
         </p>
         <div className="flex justify-center items-center">
-          <button className="Hero_Button border-2 border-solid border-light text-light font-semibold">
-            resume
-          </button>
+          <Link
+            href="/assets/JoaoBorgesCV.pdf"
+            target={"_blank"}
+            download={true}
+          >
+            <button className="Hero_Button border-2 border-solid border-light text-light font-semibold flex justify-evenly gap-2  items-center">
+              resume
+              <FiDownload size={20} />
+            </button>
+          </Link>
         </div>
       </div>
     </motion.div>
