@@ -112,7 +112,7 @@ const Skills = () => {
                 y: 0,
                 scale: 1,
                 transition: {
-                  delay: id / 2,
+                  delay: id / 4,
                   duration: 1.2,
                 },
               }}

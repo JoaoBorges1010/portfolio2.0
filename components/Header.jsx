@@ -8,7 +8,6 @@ const Header = () => {
     <header className="sticky top-0 p-5 flex items-start justify-between mx-auto z-20 xl:items-center">
       <div className="flex justify-between items-center w-full h-full max-w-screen-xl mx-auto p-4">
         {/* NAME */}
-
         <motion.div
           initial={{
             x: -300,

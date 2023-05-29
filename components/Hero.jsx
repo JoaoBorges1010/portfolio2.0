@@ -45,14 +45,14 @@ const Hero = () => {
           <Link href="#about">
             <button className="Hero_Button">About</button>
           </Link>
-          <Link href="#experiences">
-            <button className="Hero_Button">Experiences</button>
-          </Link>
           <Link href="#skills">
             <button className="Hero_Button">Skills</button>
           </Link>
           <Link href="#projects">
             <button className="Hero_Button">Projects</button>
+          </Link>
+          <Link href="#contact">
+            <button className="Hero_Button">Contact me</button>
           </Link>
         </div>
       </div>

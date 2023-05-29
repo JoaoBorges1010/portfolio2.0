@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
@@ -38,6 +39,15 @@ const Projects = () => {
         viewport={{ once: true }}
         className="w-full rounded-full absolute top-[30%] bg-primary/10 left-0 h-[500px]"
       />
+      <div
+        className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory
+      scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-primary/20"
+      >
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </div>
     </motion.div>
   );
 };
