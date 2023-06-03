@@ -61,22 +61,6 @@ const Header = () => {
               bgColor="transparent"
             />
           </motion.div>
-          <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}>
-            <SocialIcon
-              url="https://www.facebook.com/Testaz"
-              target="blank"
-              fgColor="gray"
-              bgColor="transparent"
-            />
-          </motion.div>
-          <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}>
-            <SocialIcon
-              url="https://www.instagram.com/joaoborges1010"
-              target="blank"
-              fgColor="gray"
-              bgColor="transparent"
-            />
-          </motion.div>
         </motion.div>
       </div>
     </header>

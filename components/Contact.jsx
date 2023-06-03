@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { SocialIcon } from "react-social-icons";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -124,6 +125,22 @@ const Contact = () => {
           <span className="text-sm">
             {new Date().getFullYear()} &copy; All Rights Reserved
           </span>
+          <div className="flex justice items-center">
+            <span className="text-center text-sm capitalize">
+              portfolio repo
+            </span>
+            <motion.div
+              whileHover={{ y: -2, scale: 1.5 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <SocialIcon
+                url="https://github.com/JoaoBorges1010/portfolio2.0"
+                target="blank"
+                fgColor="gray"
+                bgColor="transparent"
+              />
+            </motion.div>
+          </div>
           <h3 className=" font-light text-xs">
             Created by{" "}
             <span className="font-semibold tracking-widest text-sm underline decoration-primary underline-offset-2 text-light">

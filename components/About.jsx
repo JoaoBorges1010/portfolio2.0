@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
 
@@ -20,27 +21,40 @@ const About = () => {
         About
       </h3>
       <motion.img
-        initial={{ x: -500, opacity: 0 }}
+        initial={{ x: -100, opacity: 0 }}
         transition={{ duration: 1.5 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         src="/assets/joaoBorges2.jpg"
         className="-mb-20 md:mb-0 mt-44 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[350px] xl:h-[450px]"
       />
-      <div className=" px-10 mt-24 space-y-3">
-        <h3 className="text-4xl font-semibold">
+      <div className=" px-10 mt-20 space-y-3">
+        <h3 className="text-2xl font-semibold">
           Heres a{" "}
           <span className="underline decoration-primary underline-offset-2">
             little
           </span>{" "}
           background
         </h3>
-        <p className="text-base mt-4 text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          scelerisque risus nec dignissim blandit. Vestibulum elementum eleifend
-          magna pellentesque rhoncus. Morbi ac nisi nisi. Donec non eros sit
-          amet mi volutpat scelerisque. Mauris vitae nisl in ante ultrices
-          euismod a quis mauris.
+        <p className="text-base mt-4 text-sm text-gray-500">
+          I used to be a cook until I decided to change my Life and become a Web
+          developer. After 9 intense weeks at
+          <a
+            href="https://www.lewagon.com/"
+            className=" font-bold underline decoration-primary/50 underline-offset-4"
+            target="_blank"
+          >
+            <Image
+              src="https://www.lewagon.com/assets/v4/logo-lewagon-9c19fb39a748cd3b1f49059ce0dc6c0dfc4cc2447d5a9a3e01bd2d5a214faf3c.svg"
+              width={105}
+              height={105}
+              alt=""
+              className="hover:bg-light transition-all ease-in-out duration-300 pr-1 mx-2 rounded-md md:mr-2 md:ml-0 inline whitespace-nowrap"
+            />
+          </a>
+          bootcamp I am a coder. It has been a dream for a long time. Very
+          enthusiast and highly motivated to keep on going and learn everything
+          that I can. The sky is the Limit.
         </p>
         <div className="flex justify-center items-center">
           <Link
