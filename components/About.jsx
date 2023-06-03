@@ -48,7 +48,7 @@ const About = () => {
             target={"_blank"}
             download={true}
           >
-            <button className="Hero_Button border-2 border-solid border-light text-light font-semibold flex justify-evenly gap-2  items-center">
+            <button className="Hero_Button text-sm border-2 border-solid border-light text-light font-semibold flex justify-evenly gap-2  items-center">
               resume
               <FiDownload size={20} />
             </button>

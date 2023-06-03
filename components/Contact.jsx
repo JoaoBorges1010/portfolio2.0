@@ -40,86 +40,99 @@ const Contact = () => {
   };
 
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1.5,
-      }}
-      className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10
+    <>
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10
       justify-evenly mx-auto items-center"
-    >
-      <h3
-        className="absolute top-24 uppercase tracking-[20px] text-gray-500
-       text-2xl"
       >
-        Contact
-      </h3>
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
-          I hope you enjoyed!{" "}
-          <span className="decoration-primary/50 underline underline-offset-4">
-            Lets Talk
-          </span>
-        </h4>
-        <form
-          onSubmit={(e) => {
-            handleSubmit(e);
-          }}
-          className=" pt-10 flex flex-col space-y-2 w-fit mx-auto"
+        <h3
+          className="absolute top-24 uppercase tracking-[20px] text-gray-500
+       text-2xl"
         >
-          <div className="flex space-x-2">
+          Contact
+        </h3>
+        <div className="flex flex-col space-y-10">
+          <h4 className="text-4xl font-semibold text-center">
+            I hope you enjoyed!{" "}
+            <span className="decoration-primary/50 underline underline-offset-4">
+              Lets Talk
+            </span>
+          </h4>
+          <form
+            onSubmit={(e) => {
+              handleSubmit(e);
+            }}
+            className=" pt-10 flex flex-col space-y-2 w-fit mx-auto"
+          >
+            <div className="md:flex space-y-2 md:space-y-0 md:space-x-2">
+              <input
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+                value={name}
+                placeholder="Name"
+                className="contactInput w-full"
+                type="text"
+              />
+              <input
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                value={email}
+                placeholder="Email"
+                className="contactInput w-full"
+                type="email"
+              />
+            </div>
             <input
               onChange={(e) => {
-                setName(e.target.value);
+                setSubject(e.target.value);
               }}
-              value={name}
-              placeholder="Name"
+              value={subject}
+              placeholder="Subject"
               className="contactInput"
               type="text"
             />
-            <input
+            <textarea
               onChange={(e) => {
-                setEmail(e.target.value);
+                setMessage(e.target.value);
               }}
-              value={email}
-              placeholder="Email"
+              value={message}
+              placeholder="Message"
               className="contactInput"
-              type="email"
             />
-          </div>
-          <input
-            onChange={(e) => {
-              setSubject(e.target.value);
-            }}
-            value={subject}
-            placeholder="Subject"
-            className="contactInput"
-            type="text"
-          />
-          <textarea
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-            value={message}
-            placeholder="Message"
-            className="contactInput"
-          />
-          <button
-            type="submit"
-            className="bg-primary/50 py-5 px-10 border-2 border-transparent rounded-md text-light text-xl font-bold
+            <button
+              type="submit"
+              className="bg-primary/50 py-5 px-10 border-2 border-transparent rounded-md text-light text-xl font-bold
              hover:bg-dark hover:text-primary/50 hover:border-2 hover:border-primary/50
              ease-in-out transition-colors duration-300"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-    </motion.div>
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <footer className=" absolute  text-gray-500  rounded-xl border-t-2 w-full h-20 border-primary/50 bottom-0 flex justify-between items-center max-w-screen-xl p-10 mx-auto">
+          <span className="text-sm">
+            {new Date().getFullYear()} &copy; All Rights Reserved
+          </span>
+          <h3 className=" font-light text-xs">
+            Created by{" "}
+            <span className="font-semibold tracking-widest text-sm underline decoration-primary underline-offset-2 text-light">
+              João Borges
+            </span>
+          </h3>
+        </footer>
+      </motion.div>
+    </>
   );
 };
 

@@ -1,12 +1,12 @@
-import React from "react";
 import { motion } from "framer-motion";
+import { SocialIcon } from "react-social-icons";
 
-const ProjectCard = () => {
+const ProjectCard = ({ title, description, skills, link, details, image }) => {
   return (
-    <article
-      className="mt-32 flex flex-col z-0 rounded-lg items-center space-y-7
-     flex-shrink-0 w-[350px] md:w-[450px] xl:w-[750px] snap-center bg-[#292929] p-10
-     hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden "
+    <div
+      className="mt-32 flex flex-col rounded-lg items-center space-y-7
+          flex-shrink-0 w-[350px] md:w-[450px] xl:w-[700px] snap-center bg-[#292929]
+          hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200"
     >
       <motion.img
         initial={{
@@ -21,41 +21,42 @@ const ProjectCard = () => {
           opacity: 1,
         }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
-        src="https://user-images.githubusercontent.com/25181517/192603748-3ac17112-3653-4257-80da-a57334b11411.png"
+        className="w-28 h-28 mt-5 rounded-full md:rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
+        src={image}
         alt="temp"
       />
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">Project 1</h4>
-        <p className="font-bold text-2xl mt-1">name of project</p>
+        <h4 className="text-xl font-light text-light">{title}</h4>
         <div className="flex space-x-2 my-2">
-          <img
-            className="h-10 w-10 rounded-full"
-            src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png"
-            alt=""
-          />
-          <img
-            className="h-10 w-10 rounded-full"
-            src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png"
-            alt=""
-          />
-          <img
-            className="h-10 w-10 rounded-full"
-            src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png"
-            alt=""
-          />
+          {skills.map((skill) => {
+            return (
+              <img
+                className="w-8 h-8 rounded-full"
+                key={skill}
+                src={skill}
+                alt="skill"
+              />
+            );
+          })}
         </div>
-        <p className="uppercase py-5 text-gray-300">Datestart... dateend</p>
-        <ul className="list-disc space-y-4 ml-5 text-lg">
-          <li>Sumary List</li>
-          <li>Sumary List</li>
-          <li>Sumary List</li>
-          <li>Sumary List</li>
-          <li>Sumary List</li>
+        <p className="uppercase text-xl font-bold py-5 text-light ">
+          {description}
+        </p>
+        <ul className="list-disc space-y-2 ml-5 text-sm capitalize">
+          {details.map((detail) => {
+            return <li key={detail}>{detail}</li>;
+          })}
         </ul>
       </div>
-    </article>
+      <motion.div whileHover={{ y: -2, scale: 1.5 }} whileTap={{ scale: 0.9 }}>
+        <SocialIcon
+          url={link}
+          target="blank"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+      </motion.div>
+    </div>
   );
 };
-
 export default ProjectCard;
