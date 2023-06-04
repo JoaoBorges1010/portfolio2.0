@@ -26,7 +26,7 @@ const About = () => {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         src="/assets/joaoBorges2.jpg"
-        className="-mb-20 md:mb-0 mt-44 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[350px] xl:h-[450px]"
+        className="-mb-20 md:mb-0 mt-32 md:mt-44 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[350px] xl:h-[450px]"
       />
       <div className=" px-10 mt-20 space-y-3">
         <h3 className="text-2xl font-semibold">
