@@ -14,7 +14,6 @@ export default function Home() {
     >
       <Head>
         <title>João Borges</title>
-        <description>João Borges Page</description>
       </Head>
 
       <Header />
