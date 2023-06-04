@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     host: "smtp.gmail.com",
     auth: {
       user: "emailsenderjoao@gmail.com",
-      pass: "ylfyhmgpkoihkfma",
+      pass: process.env.password,
     },
     secure: true,
   });
