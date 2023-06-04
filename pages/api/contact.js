@@ -13,6 +13,19 @@ export default async function handler(req, res) {
     secure: true,
   });
 
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log("Server is ready to take our messages");
+        resolve(success);
+      }
+    });
+  });
+
   const mailData = {
     from: "emailsenderjoao@gmail.com",
     to: "joaoborgesbiz@gmail.com",
@@ -30,6 +43,6 @@ export default async function handler(req, res) {
         resolve(info);
       }
     });
-    res.status(200).json(req.body);
+    res.status(200).json({ status: "OK" });
   });
 }
