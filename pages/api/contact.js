@@ -33,8 +33,8 @@ export default async function handler(req, res) {
     text: req.body.name + req.body.message + " | sent from:" + req.body.email,
     html: `<div>${req.body.message}</div><p>Sent from: ${req.body.name}</p> <p>${req.body.email}</p>`,
   };
-  await new Promise(async (resolve, reject) => {
-    await transporter.sendMail(mailData, function (err, info) {
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailData, function (err, info) {
       if (err) {
         console.log(err);
         reject(err);
